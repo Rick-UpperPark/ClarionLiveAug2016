@@ -1,0 +1,23 @@
+[MODULE]
+NAME 'ProcedureForBob_AllFiles.clw'
+[COMMON]
+FROM ABC GENERATED
+[PROCEDURE]
+NAME ProcedureForBob
+NOEXPORT
+[COMMON]
+FROM ABC Source
+[PROMPTS]
+%GenerateOpenClose LONG  (0)
+%GenerateSaveRestore LONG  (0)
+[EMBED]
+EMBED %ProcedureRoutines
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 3500
+PROPERTY:END
+ Message('Hi Bob')
+[END]
+[END]
+[END]
