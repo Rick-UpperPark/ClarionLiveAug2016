@@ -18,6 +18,7 @@ source/
 !*.pr
 !*.ver
 !*.sql
+!*.ini
 !up_vcsettings.ini
 !CA_Roots.pem
 
