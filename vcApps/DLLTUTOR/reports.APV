@@ -1,0 +1,20 @@
+[MODULE]
+NAME 'reports.lib'
+NOPOPULATE
+[COMMON]
+FROM ABC ExternalDLL
+[PROCEDURE]
+NAME CustReport
+NOEXPORT
+[COMMON]
+FROM ABC External
+[PROMPTS]
+%ProcedureOneInstance LONG  (0)
+[PROCEDURE]
+NAME InvoiceReport
+NOEXPORT
+[COMMON]
+FROM ABC External
+[PROMPTS]
+%ProcedureOneInstance LONG  (0)
+[END]

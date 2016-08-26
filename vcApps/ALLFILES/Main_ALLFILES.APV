@@ -1,0 +1,68 @@
+[MODULE]
+NAME 'Main_ALLFILES.clw'
+[COMMON]
+FROM ABC GENERATED
+[PROCEDURE]
+NAME Main
+NOEXPORT
+[COMMON]
+DESCRIPTION 'move changes'
+FROM ABC Source
+[PROMPTS]
+%GenerateOpenClose LONG  (0)
+%GenerateSaveRestore LONG  (0)
+[EMBED]
+EMBED %ProcessedCode
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 5000
+PROPERTY:END
+    MESSAGE('Hi Rick|Welcome to CIDC 2013|Great Info, Great People','More Wow',ICON:Application,BUTTON:OK+BUTTON:Cancel)
+    BadVariable        =  12433 * 12
+    MorestuffVariables =  'asdf'
+
+
+
+[END]
+EMBED %DataSection
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 1300
+PROPERTY:END
+BadVariable         long
+MorestuffVariables  string(30)
+[END]
+[END]
+[PROCEDURE]
+NAME DisplayMessage
+PROTOTYPE '(STRING pMsg)'
+PARAMETERS '(STRING pMsg)'
+NOEXPORT
+[COMMON]
+FROM ABC Source
+[PROMPTS]
+%GenerateOpenClose LONG  (0)
+%GenerateSaveRestore LONG  (0)
+[EMBED]
+EMBED %ProcessedCode
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 5000
+PROPERTY:END
+  Message(pMsg)  !This app is for CIDC 2013
+!  ii = 123
+
+[END]
+EMBED %DataSection
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 1300
+PROPERTY:END
+ii                      long
+[END]
+[END]
+[END]

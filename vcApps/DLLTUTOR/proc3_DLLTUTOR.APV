@@ -1,0 +1,12 @@
+[MODULE]
+NAME 'proc3_DLLTUTOR.clw'
+[COMMON]
+FROM ABC GENERATED
+[PROCEDURE]
+NAME proc3
+[COMMON]
+FROM ABC Source
+[PROMPTS]
+%GenerateOpenClose LONG  (0)
+%GenerateSaveRestore LONG  (0)
+[END]
